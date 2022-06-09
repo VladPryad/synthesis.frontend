@@ -1,17 +1,14 @@
-import { InjectedConnector } from '@web3-react/injected-connector'
 import { useWeb3React } from "@web3-react/core"
-
-const injected = new InjectedConnector({
-  supportedChainIds: [1, 3, 4, 5, 42],
-})
+import { injected } from "../../../utils/chains"
 
 
 export function Wallet() {
-    const { active, account, library, connector, activate, deactivate } = useWeb3React()
+    const { active, account, chainId, library, connector, activate, deactivate } = useWeb3React()
 
     async function connect() {
         try {
             await activate(injected)
+
         } catch (ex) {
             console.error(ex)
         }

@@ -1,5 +1,9 @@
+import { MoleculeList } from "./MoleculeList";
+
 export function Molecule() {
     return (
-        <div>Molecule</div>
+        <div>Molecule
+            <MoleculeList />
+        </div>
     )
 }

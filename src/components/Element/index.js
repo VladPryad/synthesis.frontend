@@ -1,5 +1,10 @@
+import { ElementList } from "./ElementList";
+
 export function Element() {
     return (
-        <div>Element</div>
+        <div>Element
+                <ElementList />
+        </div>
+
     )
 }
