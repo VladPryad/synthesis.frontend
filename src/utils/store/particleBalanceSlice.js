@@ -43,12 +43,12 @@ export const particlesBalanceSlice = createSlice({
         state.balances = action.payload
         console.log("Successfully fetched particle balances: ", action)
       },
-      [getParticlesBalanceThunk.rejected]: (state) => {
+      [getParticlesBalanceThunk.rejected]: (state, action) => {
         state.loading = false
-        console.log("Failed fetching particle balances")
+        console.log("Failed fetching particle balances", action.payload)
       },
     },
   })
   
-export const { fetchParticlesBalance } = particlesBalanceSlice.actions
+export const {  } = particlesBalanceSlice.actions
 export default particlesBalanceSlice.reducer

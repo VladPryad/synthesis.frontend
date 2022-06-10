@@ -48,4 +48,26 @@ export const TOKEN_LIST = [
     "chainId": 4,
     "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xc778417E063141139Fce010982780140Aa0cD5Ab/logo.png"
   },
+
+  {
+    "name": "Electron",
+    "address": "0xBaeaf2aA3527E44d61Ebb0aF253b1B1cdDd3dac2",
+    "symbol": "EEE",
+    "decimals": 18,
+    "chainId": 4,
+  },
+  {
+    "name": "Proton",
+    "address": "0xAe71465461931F72f7d2D5409E123878ADAC703F",
+    "symbol": "PPP",
+    "decimals": 18,
+    "chainId": 4,
+  },
+  {
+    "name": "Neutron",
+    "address": "0x73be5085365D958B352782f28446d9b4C06975e2",
+    "symbol": "NNN",
+    "decimals": 18,
+    "chainId": 4,
+    },
 ]

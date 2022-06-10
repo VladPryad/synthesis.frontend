@@ -23,7 +23,7 @@ export function ElementList() {
         let amount = elementsBalance.balances[el];
 
         elList.push(
-            <ElementCard amount={amount} symbol={el} element={elements[el]} />
+            <ElementCard key={el} amount={amount} symbol={el} element={elements[el]} />
         )
     }
 

@@ -58,13 +58,13 @@ export const moleculesBalanceSlice = createSlice({
 
         console.log("Successfully fetched molecules balances: ", payload)
       },
-      [getMoleculeBalanceThunk.rejected]: (state) => {
+      [getMoleculeBalanceThunk.rejected]: (state, action) => {
         state.loading = false
 
-        console.log("Failed fetching molecules balances")
+        console.log("Failed fetching molecules balances", action.payload)
       },
     },
   })
   
-export const { fetchParticlesBalance } = moleculesBalanceSlice.actions
+export const {  } = moleculesBalanceSlice.actions
 export default moleculesBalanceSlice.reducer

@@ -5,6 +5,9 @@ import accountReducer from './accountSlice'
 import providerReducer from './providerSlice'
 import elementsBalanceSlice from './elementBalanceSlice'
 import moleculesBalanceSlice from './moleculeBalanceSlice'
+import moleculeInteractionSlice from './moleculeInteractionSlice'
+import elementInteractionSlice from './elementInteractionSlice'
+import particleInteractionSlice from './particleInteractionSlice'
 
   export default configureStore({
     reducer: {
@@ -12,6 +15,9 @@ import moleculesBalanceSlice from './moleculeBalanceSlice'
       particlesBalance: particlesBalanceReducer,
       elementsBalance: elementsBalanceSlice,
       moleculesBalance: moleculesBalanceSlice,
+      moleculeInteraction: moleculeInteractionSlice,
+      elementInteraction: elementInteractionSlice,
+      particleInteraction: particleInteractionSlice,
       account: accountReducer,
       provider: providerReducer
     }

@@ -58,13 +58,13 @@ export const elementsBalanceSlice = createSlice({
 
         console.log("Successfully fetched elements balances: ", payload)
       },
-      [getElementBalanceThunk.rejected]: (state) => {
+      [getElementBalanceThunk.rejected]: (state, action) => {
         state.loading = false
 
-        console.log("Failed fetching elements balances")
+        console.log("Failed fetching elements balances", action.payload)
       },
     },
   })
   
-export const { fetchParticlesBalance } = elementsBalanceSlice.actions
+export const {  } = elementsBalanceSlice.actions
 export default elementsBalanceSlice.reducer

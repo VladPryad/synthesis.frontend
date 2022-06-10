@@ -1,7 +1,5 @@
 import { MoleculeCard } from "../MoleculeCard";
 import store from "../../../utils/store";
-import { useEffect } from "react";
-import { getParticlesBalanceThunk } from "../../../utils/store/particleBalanceSlice";
 import { useWeb3React } from "@web3-react/core";
 import elements from '../../../config/elementList';
 import { getMoleculeBalanceThunk } from "../../../utils/store/moleculeBalanceSlice";
@@ -17,8 +15,8 @@ export function MoleculeList() {
         console.log("Cannot fetch element balances, connect wallet");
     }
 
-    const obtainedList = moleculesBalance.obtained.map(id => <MoleculeCard id={id} spare={false} />);
-    const spareList = moleculesBalance.spare.map(id => <MoleculeCard id={id} spare={true} />);
+    const obtainedList = moleculesBalance.obtained.map(id => <MoleculeCard key={id} id={id} isSpare={false} />);
+    const spareList = moleculesBalance.spare.map(id => <MoleculeCard key={id} id={id} isSpare={true} />);
 
     return (
         <div>Element List
