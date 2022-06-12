@@ -1,0 +1,1 @@
+export default ["C", "H", "O", "N", "S", "P", "Cl", "Na", "Li"];

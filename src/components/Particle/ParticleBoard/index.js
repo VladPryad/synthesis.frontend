@@ -30,15 +30,6 @@ export function ParticleBoard() {
     return (
         <Grid container spacing={2}>
             {particlesList}
-            {/* <Grid item xs={4}>
-                <div style={{background: "blue"}}>Electron: {electron} EEE</div>
-            </Grid>
-            <Grid item xs={4}>
-                <div style={{background: "red"}}>Proton: {proton} PPP</div>
-            </Grid>
-            <Grid item xs={4}>
-                <div style={{background: "green"}}>Neutron: {neutron} NNN</div>
-            </Grid> */}
         </Grid>
     )
 }

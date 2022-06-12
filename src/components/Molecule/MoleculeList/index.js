@@ -15,8 +15,8 @@ export function MoleculeList() {
         console.log("Cannot fetch element balances, connect wallet");
     }
 
-    const obtainedList = moleculesBalance.obtained.map(id => <MoleculeCard key={id} id={id} isSpare={false} />);
-    const spareList = moleculesBalance.spare.map(id => <MoleculeCard key={id} id={id} isSpare={true} />);
+    const obtainedList = moleculesBalance.obtained.map(mol => <MoleculeCard key={mol.id} mol={mol} isSpare={false} />);
+    const spareList = moleculesBalance.spare.map(mol => <MoleculeCard key={mol.id} mol={mol} isSpare={true} />);
 
     return (
         <div>Element List

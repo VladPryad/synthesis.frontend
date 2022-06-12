@@ -17,11 +17,19 @@ export const getMoleculeBalanceThunk = createAsyncThunk(
 
     for(let i = 0; i < Number.parseInt(tokenCount); i++) {
         let owner = await moleculeContract.methods.ownerOf(i).call();
+        let uri = await moleculeContract.methods.tokenURI(i).call();
+        let compound = await moleculeContract.methods.getMoleculeCompound(i).call();
+
+        const mol = {
+          id: i,
+          uri,
+          compound
+        }
 
         if(owner == account) {
-            obtained.push(i);
+            obtained.push(mol);
         } else if (owner == CONTRACTS_OWNER) {
-            spare.push(i);
+            spare.push(mol);
         }
     }
 
