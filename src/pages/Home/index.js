@@ -1,5 +1,9 @@
+import { LandingFrame } from "../../components/Landing";
+
 export function Home() {
     return (
-        <div>HOME</div>
+        <div style={{backgroundColor: "grey"}}>
+            <LandingFrame />
+        </div>
     )
 }
