@@ -10,13 +10,13 @@ export function TopTabs(props) {
         <div style={{marginTop: "80px"}}>
             <Grid container spacing={2}>
                 <Grid item xs={4}>
-                    <img style={{display: "block", margin: "auto"}} height={'86px'} onClick={() => props.setTab(0)} alt="Particles tab" src={particle}/>
+                    <img style={{display: "block", margin: "auto"}} height={'75px'} onClick={() => props.setTab(0)} alt="Particles tab" src={particle}/>
                 </Grid>
                 <Grid item xs={4}>
-                    <img style={{display: "block", margin: "auto"}} height={'86px'} onClick={() => props.setTab(1)} alt="Elements tab" src={element}/>
+                    <img style={{display: "block", margin: "auto"}} height={'75px'} onClick={() => props.setTab(1)} alt="Elements tab" src={element}/>
                 </Grid>
                 <Grid item xs={4}>
-                    <img style={{display: "block", margin: "auto"}} height={'86px'} onClick={() => props.setTab(2)} alt="Molecules tab" src={molecule}/>
+                    <img style={{display: "block", margin: "auto"}} height={'75px'} onClick={() => props.setTab(2)} alt="Molecules tab" src={molecule}/>
                 </Grid>
             </Grid>
         </div>

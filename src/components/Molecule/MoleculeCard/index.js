@@ -3,6 +3,10 @@ import { requestObtainMoleculeThunk } from '../../../utils/store/moleculeInterac
 import store from "../../../utils/store";
 import elementList from "../../../config/elementList";
 import elementSequence from "../../../config/elementSequence";
+import Grid from "@material-ui/core/Grid";
+import Avatar from "material-ui/Avatar";
+import { Button } from "@material-ui/core";
+import randomColor from "randomcolor";
 
 export function MoleculeCard(props) {
     const { mol, isSpare } = props;
@@ -34,11 +38,25 @@ export function MoleculeCard(props) {
         return formula;
     }
 
+    const color = randomColor();
+
     return (
-        <div>MoleculeCard: {mol.id} Description: {mol.uri} Compound: {printMoleculeCompound()}
-            { isSpare && 
-                <button onClick={() => requestObtain()}> Request obtain this one </button>
-            }
-        </div>
+        <Grid item xs={1}>
+                <div id="outer"  style={{margin: "30px", padding: "5px", border: "1px solid white", borderRadius: "20px", backgroundColor: color}}>
+                    <div style={{backgroundColor: 'white', borderRadius: '10px', paddingLeft: "30px", paddingRight: "30px", marginTop: "5px"}}>
+                    <span>#{mol.id}</span>
+                    </div>
+                    <div style={{backgroundColor: 'white', borderRadius: '50px', padding: "10px", margin: "10px"}}><span>{mol.uri}</span></div>
+                    <div style={{backgroundColor: 'white', borderRadius: '50px', padding: "10px", marginTop: "10px"}}>
+                        <span>{printMoleculeCompound()} </span>
+                    </div>
+                    <br/>
+                    { isSpare && 
+                        <Button style={{marginTop: "0px", marginBottom: "10px"}} color="primary" fullWidth={false} size="small" onClick={() => requestObtain()} variant="contained">
+                            Obtain
+                        </Button>
+                    }
+                </div>
+        </Grid>
     )
 }

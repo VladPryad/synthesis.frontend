@@ -19,3 +19,14 @@ code {
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
+
+#inner { 
+}
+
+#outer {
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

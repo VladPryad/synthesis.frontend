@@ -39,7 +39,7 @@ export function ParticleSwap() {
     return (
         <div>
             <ParticleBoard />
-            <div className="Uniswap">
+            <div className="Uniswap" id='outer'>
                 <SwapWidget
                     provider={library?.currentProvider}
                     jsonRpcEndpoint={jsonRpcEndpoint}

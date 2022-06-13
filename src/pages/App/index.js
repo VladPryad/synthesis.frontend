@@ -14,7 +14,7 @@ export function App() {
     }
 
     return (
-        <div>
+        <div style={{backgroundColor:"#E0FFF1"}}>
             <TopMenu setTab = {setTab} />
             {tabIndex === Tabs.PARTICLE && 
                 <Particle />}

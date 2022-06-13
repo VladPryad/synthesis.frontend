@@ -6,6 +6,7 @@ import { App } from './App';
 import Web3 from 'web3';
 import { Web3ReactProvider } from '@web3-react/core';
 import { Web3Provider } from "@ethersproject/providers"
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 function getLibrary(provider) {
   return new Web3(provider);
@@ -21,15 +22,17 @@ export function Main() {
   return (
     <Web3ReactProvider getLibrary={getLibrary}>
 
-        <Routes>
-            <Route path="/" element={<Navigate replace to="/home" />} />
-            <Route path="/home" element={<Home/>} />
-            <Route path="/particle" element={<App/>} />
-            <Route path="/element" element={<App/>} />
-            <Route path="/molecule" element={<App/>} />
-            <Route path="/*" element={<NotFound/>} />
-            <Route path="/404" exact element={<NotFound/>} />
-        </Routes>
+        <MuiThemeProvider>
+          <Routes>
+              <Route path="/" element={<Navigate replace to="/home" />} />
+              <Route path="/home" element={<Home/>} />
+              <Route path="/particle" element={<App/>} />
+              <Route path="/element" element={<App/>} />
+              <Route path="/molecule" element={<App/>} />
+              <Route path="/*" element={<NotFound/>} />
+              <Route path="/404" exact element={<NotFound/>} />
+          </Routes>
+        </MuiThemeProvider>
 
     </ Web3ReactProvider>
   );
